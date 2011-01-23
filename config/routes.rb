@@ -3,6 +3,7 @@ module TMinus
     def Routes.map
       Rails.application.routes.draw do
         post '/' => 'prelaunch#create', :as => :prelaunch
+        get '/:hash' => 'prelaunch#new'
         root :to => 'prelaunch#new'
       end
     end
